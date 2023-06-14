@@ -2,18 +2,22 @@ import { useState } from "react"
 
 function Heroes(){
     const [names,setNames] = useState([
-        <ul>
-        <li>  Шерлок Холмс </li>
-        <li>  Доктор Ватсон </li>
-        <li>Профессор Мориарти</li>
-        <li>  Миссис Хадсон</li>
-        <li>  Ирен Адлер</li>
-       </ul>
+        
+          'Шерлок Холмс' ,
+          'Доктор Ватсон' ,
+        'Профессор Мориарти',
+         'Миссис Хадсон',
+          'Ирен Адлер',
+       
     ])
     return(
         <div>
-           {names}
+            {
+                names.map((name, index) =>
+                <li key = {index}>{name}</li>
+            )
+            }
         </div>
-    )
+        )
 }
 export default Heroes
